@@ -1,0 +1,45 @@
+providers:
+
+  reasoning:
+    provider: "gemini"
+    model: "gemini-2.5-flash"
+
+  story:
+    provider: "gemini"
+    model: "gemini-2.5-flash"
+
+  world:
+    provider: "gemini"
+    model: "gemini-2.5-flash"
+
+  appearance:
+    provider: "gemini"
+    model: "gemini-2.5-flash"
+
+  scene:
+    provider: "gemini"
+    model: "gemini-2.5-flash"
+
+  continuity:
+    provider: "gemini"
+    model: "gemini-2.5-flash"
+
+  prompt:
+    provider: "gemini"
+    model: "gemini-2.5-flash"
+
+  validation:
+    provider: "gemini"
+    model: "gemini-2.5-flash"
+
+  video_qc:
+    provider: "gemini"
+    model: "gemini-2.5-flash"
+
+  video:
+    provider: "veo"
+    model: "veo-3.1-generate-preview"
+
+  image:
+    provider: "gemini"
+    model: "gemini-2.5-flash-image"

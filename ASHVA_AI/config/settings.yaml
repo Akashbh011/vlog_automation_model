@@ -1,0 +1,40 @@
+project:
+  name: "ASHVA AI"
+  version: "0.1.0"
+  environment: "development"
+
+video:
+  target_duration_seconds: 40
+  scene_count: 5
+  scene_duration_seconds: 8
+  aspect_ratio: "9:16"
+  fps: 24
+
+generation:
+  max_scene_retries: 3
+  require_pre_validation: true
+  require_post_validation: true
+  save_intermediate_files: true
+
+continuity:
+  enforce_previous_scene_end_as_next_scene_start: true
+  enforce_world_state: true
+  enforce_character_state: true
+  enforce_environment_state: true
+  enforce_camera_state: true
+
+assets:
+  root_directory: "assets"
+  manifest_file: "assets/asset_manifest.yaml"
+
+episodes:
+  root_directory: "episodes"
+
+media:
+  extracted_frames_directory: "media/extracted_frames"
+  ffmpeg_directory: "media/ffmpeg"
+
+logging:
+  level: "INFO"
+  save_to_file: true
+  log_directory: "logs"

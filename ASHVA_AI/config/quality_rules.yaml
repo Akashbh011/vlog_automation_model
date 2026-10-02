@@ -1,0 +1,133 @@
+quality_system:
+
+  story:
+
+    required:
+      - narrative_purpose
+      - beginning
+      - progression
+      - ending
+
+    rules:
+      user_script_is_authoritative: true
+      every_scene_must_advance_story: true
+      no_unjustified_major_events: true
+      no_contradictory_events: true
+
+
+  environment:
+
+    required:
+      - location
+      - time_of_day
+      - weather
+      - terrain
+      - atmosphere
+
+    rules:
+      environment_must_match_episode: true
+      environment_must_remain_continuous_unless_story_changes_it: true
+
+
+  motorcycle:
+
+    required:
+      - model
+      - color
+      - physical_presence
+
+    rules:
+      identity_must_match_reference: true
+      geometry_must_remain_consistent: true
+      accessories_must_remain_consistent: true
+      color_must_remain_consistent: true
+
+
+  rider:
+
+    rules:
+      identity_must_remain_consistent: true
+      clothing_must_remain_consistent_when_locked: true
+      physical_position_must_be_plausible: true
+
+
+  ashva:
+
+    rules:
+      core_identity_must_remain_consistent: true
+      episode_variant_must_remain_consistent: true
+      behavior_must_follow_story: true
+      appearance_must_match_world: true
+
+
+  summoning:
+
+    rules:
+      must_match_environment: true
+      must_match_weather: true
+      must_match_story: true
+      must_match_ashva_variant: true
+      must_have_narrative_purpose: true
+
+
+  camera:
+
+    required:
+      - camera_position
+      - camera_movement
+
+    rules:
+      physically_plausible: true
+      continuity_required: true
+
+
+  prompt:
+
+    required:
+
+      - narrative_purpose
+      - environment
+      - subject
+      - subject_action
+      - camera
+      - camera_movement
+      - lighting
+      - weather
+      - atmosphere
+      - audio
+      - start_state
+      - end_state
+      - continuity
+
+    quality:
+
+      must_be_specific: true
+      must_be_story_relevant: true
+      must_not_contain_contradictions: true
+      must_not_use_vague_instructions: true
+
+
+  continuity:
+
+    required:
+
+      - previous_scene_end_state
+      - current_scene_start_state
+      - current_scene_end_state
+
+    rules:
+
+      next_scene_start_must_equal_previous_scene_end: true
+      motorcycle_state_must_match: true
+      rider_state_must_match: true
+      ashva_state_must_match: true
+      environment_state_must_match: true
+      camera_state_must_match: true
+
+
+  generation:
+
+    pre_generation_validation_required: true
+    post_generation_validation_required: true
+
+    failure_action: "targeted_regeneration"

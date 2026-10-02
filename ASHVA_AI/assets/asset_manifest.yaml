@@ -1,0 +1,59 @@
+version: "1.0"
+
+bike:
+
+  identity_assets: []
+
+  views:
+    front: []
+    rear: []
+    left: []
+    right: []
+    tank: []
+    dashboard: []
+    handlebar: []
+    exhaust: []
+    wheels: []
+
+  accessories: []
+
+
+rider:
+
+  identity_assets: []
+
+  views:
+    helmet: []
+    jacket: []
+    gloves: []
+    riding_pov: []
+
+
+ashva:
+
+  identity_assets: []
+
+  views:
+    primary: []
+    full_body: []
+    face: []
+    side: []
+    transformation: []
+
+  appearance_variants: []
+
+
+environments:
+
+  locations: []
+
+  weather: []
+
+  reference_images: []
+
+
+reference_frames:
+
+  global: []
+
+  episodes: []

@@ -1,0 +1,46 @@
+global_locks:
+
+  motorcycle:
+    identity: true
+    model: true
+    color: true
+    geometry: true
+    core_accessories: true
+
+  ashva:
+    core_identity: true
+    species: true
+    relationship_with_rider: true
+    relationship_with_motorcycle: true
+
+  universe:
+    realism_standard: true
+
+
+episode_locks:
+
+  environment: true
+  weather: true
+  time_of_day: true
+  visual_style: true
+  color_language: true
+  ashva_variant: true
+  summoning_language: true
+
+
+scene_variables:
+
+  camera_position: true
+  camera_movement: true
+  rider_action: true
+  motorcycle_position: true
+  motorcycle_speed: true
+  ashva_position: true
+  ashva_movement: true
+  environmental_motion: true
+
+
+continuity_locks:
+
+  previous_scene_end_state: true
+  next_scene_start_state: true

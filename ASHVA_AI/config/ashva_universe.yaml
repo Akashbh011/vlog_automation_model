@@ -1,0 +1,147 @@
+universe:
+
+  name: "ASHVA"
+
+  description: >
+    A cinematic motorcycle vlog universe in which a rider
+    has a supernatural connection with his motorcycle and
+    communicates with a supernatural beast called Ashva.
+
+  core_style:
+    realism: "photorealistic"
+    cinematic: true
+    grounded_physics: true
+    natural_camera_behavior: true
+
+
+rider:
+
+  identity:
+    consistency_required: true
+
+  visual_identity:
+    source: "asset_library"
+
+  rules:
+    preserve_clothing_when_episode_requires_continuity: true
+    preserve_helmet_when_episode_requires_continuity: true
+    preserve_riding_position_realistically: true
+
+
+motorcycle:
+
+  model: "Suzuki V-Strom 250 SX"
+  color: "white"
+
+  identity_locked: true
+  geometry_locked: true
+
+  rules:
+    preserve_model_geometry: true
+    preserve_color: true
+    preserve_known_accessories: true
+    preserve_dashboard_layout: true
+    preserve_wheel_geometry: true
+    preserve_headlight_structure: true
+
+  visual_reference_required: true
+
+
+ashva:
+
+  name: "Ashva"
+
+  identity_locked: true
+
+  core_identity:
+
+    species: "supernatural horse/beast"
+
+    relationship:
+      rider: "supernatural companion"
+      motorcycle: "mystically connected"
+
+    personality:
+      intelligent: true
+      aware: true
+      communicative: true
+      emotionally_responsive: true
+
+  permanent_traits:
+
+    - supernatural
+    - intelligent
+    - connected_to_motorcycle
+    - connected_to_rider
+    - capable_of_communication
+    - capable_of_environmental_interaction
+
+  appearance:
+
+    core_identity_locked: true
+    episode_specific_variation_allowed: true
+
+    allowed_variations:
+      - aura
+      - energy
+      - particles
+      - markings
+      - transparency
+      - lighting
+      - color_treatment
+      - environmental_interaction
+
+  summoning:
+
+    required: false
+
+    when_present:
+      must_match_environment: true
+      must_match_weather: true
+      must_match_story_theme: true
+      must_match_emotional_state: true
+      must_transition_from_previous_state: true
+
+      must_not:
+        - feel_random
+        - ignore_environment
+        - contradict_story
+        - appear_without_narrative_reason
+
+
+story:
+
+  user_script_is_source_of_truth: true
+
+  rules:
+
+    preserve_core_story: true
+    preserve_user_intent: true
+    every_scene_must_advance_story: true
+
+    prohibit:
+      - random_major_events
+      - unexplained_character_changes
+      - unexplained_environment_changes
+      - contradictory_dialogue
+      - irrelevant_visual_spectacle
+
+
+cinematography:
+
+  default_camera_style:
+    type: "motorcycle rider POV"
+
+  realism:
+
+    realistic_camera_motion: true
+    realistic_motorcycle_vibration: true
+    realistic_motion_blur: true
+    realistic_depth: true
+
+  prohibited:
+
+    - impossible_camera_positions
+    - physically impossible_motion
+    - random_camera_cuts_without_narrative_reason
+    - floating_camera
